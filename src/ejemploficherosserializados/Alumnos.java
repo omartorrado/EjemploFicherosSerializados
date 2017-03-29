@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author oracle
  */
-public class Alumnos implements Serializable{
+public class Alumnos implements Serializable, Comparable<Alumnos>{
     
     private String nombre;
     private int nota;
@@ -36,6 +36,12 @@ public class Alumnos implements Serializable{
     public void setNota(int nota) {
         this.nota = nota;
     }
+
+    @Override
+    public int compareTo(Alumnos a) {
+        return this.getNota()-a.getNota();                     
+    }
+    
     
     
 }

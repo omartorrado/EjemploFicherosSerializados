@@ -33,9 +33,9 @@ public class LeerEscribir {
             fos.close();
             oos.close();
         } catch (FileNotFoundException e) {
-            System.out.println(e.toString());
+            System.out.println("FileNotFound"+e.toString());            
         } catch (IOException ex) {
-            System.out.println(ex.toString());
+            System.out.println("IO"+ex.toString());
         }
     }
     
@@ -67,13 +67,18 @@ public class LeerEscribir {
             
             
         } catch (FileNotFoundException e) {
-            System.out.println(e.toString());
+            System.out.println("FileNotFound"+e.toString());
         } catch (IOException ex) {
-            System.out.println(ex.toString());
+            System.out.println("IO"+ex.toString());
         } catch (ClassNotFoundException exc) {
-            System.out.println(exc.toString());
+            System.out.println("ClassNotFound"+exc.toString());
         }
     }
     
-    
+    public static void ver(){
+        listaAprobados.sort(null);
+        for(Alumnos a:listaAprobados){
+            System.out.println(a.getNombre()+", "+a.getNota());
+        }
+    }
 }
