@@ -15,7 +15,7 @@ public class EjemploFicherosSerializados {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //LeerEscribir.escribir();
+        LeerEscribir.escribir();
         LeerEscribir.leer();
         LeerEscribir.verArrayList();
         LeerEscribir.leerFichero("notas.dat");
